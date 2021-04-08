@@ -49,7 +49,7 @@ resource "aws_security_group" "rds" {
     from_port   = 3306
     to_port     = 3306
     protocol    = "tcp"
-    cidr_blocks = [module.network.cidr]
+    cidr_blocks = [module.network.vpc_cidr]
   }
   
   egress {
@@ -70,7 +70,7 @@ resource "aws_security_group" "redis" {
     from_port   = 6379
     to_port     = 6379
     protocol    = "tcp"
-    cidr_blocks = [module.network.cidr]
+    cidr_blocks = [module.network.vpc_cidr]
   }
   
   egress {
