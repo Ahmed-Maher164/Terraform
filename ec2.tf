@@ -30,4 +30,8 @@ resource "aws_instance" "application" {
   tags = {
     Name = "application"
   }
+
+
+
+  
 }

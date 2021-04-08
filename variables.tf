@@ -44,3 +44,7 @@ variable "ami_ubuntu_region" {
 }
 
 
+variable "key" {
+  type = string
+}
+
